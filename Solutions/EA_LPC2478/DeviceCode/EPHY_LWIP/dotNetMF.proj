@@ -1,0 +1,36 @@
+<!-- Builds the DP83848_EA_LPC2478_LWIP.$(LIB_EXT), for SPOT projects -->
+
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\EPHY_LWIP</Directory>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <PropertyGroup>
+    <AssemblyName>DP83848_EA_LPC2478_LWIP</AssemblyName>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DP83848_lwip.cpp" />
+    <HFiles Include="DP83848_lwip.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IncludePaths Include="DeviceCode\pal\net" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\ipv4" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\proj\lwIPv4lib" /> 
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include" /> 
+    <IncludePaths Include="DeviceCode\pal\lwip\SocketsDriver" />
+    <IncludePaths Include="DeviceCode\pal\lwip\TinyCLR" />
+    <IncludePaths Include="DeviceCode\Targets\Native\LPC24XX\DeviceCode\EMAC_lwip" />    
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+
+</Project>
+
+

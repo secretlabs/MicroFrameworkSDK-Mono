@@ -1,0 +1,41 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pqueue</Directory>
+    <AssemblyName>pq_test</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <ProjectGuid>6cbe9d5b-65ab-41b0-90be-c4023683b143</ProjectGuid>
+    <Subsystem>CONSOLE</Subsystem>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="pq_test.cpp" />
+
+    <!--HFiles Include="KeyGen.h" /-->
+
+    <IncludePaths Include="Support\include"/>
+    <IncludePaths Include="DeviceCode\include"/>
+    <IncludePaths Include="CLR\Tools\include"/>
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\Clr\Tools\Tools.Settings" />
+  <ItemGroup>
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pqueue\dotnetmf.proj" />
+    <DriverLibs Include="pqueue_openssl.$(LIB_EXT)" />
+  </ItemGroup>
+
+
+</Project>
+

@@ -1,0 +1,6 @@
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\bin\Debug\ConsoleApplication2.exe.config
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\bin\Debug\ConsoleApplication2.exe
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\bin\Debug\ConsoleApplication2.pdb
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\obj\x86\Debug\ConsoleApplication2.exe
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldClient_WCF\obj\x86\Debug\ConsoleApplication2.pdb

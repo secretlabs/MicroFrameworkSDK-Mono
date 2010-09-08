@@ -1,0 +1,80 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>ssl_types</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{dcfee588-1dc0-47bb-9de0-2667fef0808a}</ProjectGuid>
+    <Description>Crypto Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>ssl_types.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\tinyclr\dotNetMF.proj</ProjectPath>
+    <ManifestFile>ssl_pal.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Sockets_ssl_PAL" Guid="{E34A68CD-2676-422B-BE70-419E3306039D}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\tinyclr</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+
+
+  <ItemGroup>
+    <HFiles Include="ssl_types.h" />
+
+    <Compile Include="ssl_types.cpp" />
+    <Compile Include="file.cpp" />
+    <Compile Include="ssl_parse_certificate_internal.cpp" />
+    <Compile Include="ssl_connect_internal.cpp" />
+    <Compile Include="ssl_accept_internal.cpp" />
+    <Compile Include="ssl_read_internal.cpp" />
+    <Compile Include="ssl_write_internal.cpp" />
+    <Compile Include="ssl_closesocket_internal.cpp" />
+    <Compile Include="ssl_pending_internal.cpp" />
+    <Compile Include="ssl_exit_context_internal.cpp" />
+    <Compile Include="ssl_generic_init_internal.cpp" />
+    <Compile Include="ssl_initialize_internal.cpp" />
+    <Compile Include="ssl_uninitialize_internal.cpp" />
+    <Compile Include="ssl_clear_cert_auth_internal.cpp" />
+    <Compile Include="ssl_add_cert_auth_internal.cpp" />
+
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+    <IncludePaths Include="DeviceCode\pal\COM\sockets\openssl" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\ipv4" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\proj\lwIPv4lib" /> 
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include" /> 
+    <IncludePaths Include="DeviceCode\pal\lwip\SocketsDriver" />
+    <IncludePaths Include="DeviceCode\pal\lwip\TinyCLR" />
+    <IncludePaths Include="DeviceCode\pal\COM\sockets_lwip\" />
+    <IncludePaths Include="DeviceCode\pal\net\" />
+  </ItemGroup>
+  <ItemGroup>
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\ssl\dotNetMF.proj"/>    
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

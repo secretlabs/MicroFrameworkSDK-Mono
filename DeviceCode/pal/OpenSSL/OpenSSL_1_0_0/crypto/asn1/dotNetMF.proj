@@ -1,0 +1,90 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>asn1_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{3ca8e442-4fcc-459f-9f4d-0f8d370ac1d1}</ProjectGuid>
+    <Description>Crypto ASN1 Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>asn1_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1\dotNetMF.proj</ProjectPath>
+    <ManifestFile>asn1_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="asn1.h" />
+    <HFiles Include="asn1_mac.h" />
+    <HFiles Include="asn1t.h" />
+    <HFiles Include="asn1_locl.h" />
+
+    <Compile Include="a_object.cpp" />
+    <Compile Include="a_bitstr.cpp" />
+    <Compile Include="a_utctm.cpp" />
+    <Compile Include="a_gentm.cpp" />
+    <Compile Include="a_time.cpp" />
+    <Compile Include="a_int.cpp" />
+    <Compile Include="a_octet.cpp" />
+    <Compile Include="a_print.cpp" />
+    <Compile Include="a_type.cpp" />
+    <Compile Include="a_set.cpp" />
+    <Compile Include="a_dup.cpp" />
+    <Compile Include="a_d2i_fp.cpp" />
+    <Compile Include="a_i2d_fp.cpp" />
+    <Compile Include="a_enum.cpp" />
+    <Compile Include="a_utf8.cpp" />
+    <Compile Include="a_sign.cpp" />
+    <Compile Include="a_digest.cpp" />
+    <Compile Include="a_verify.cpp" />
+    <Compile Include="a_mbstr.cpp" />
+    <Compile Include="a_strex.cpp" />
+    <Compile Include="x_algor.cpp" />
+    <Compile Include="x_val.cpp" />
+    <Compile Include="x_pubkey.cpp" />
+    <Compile Include="x_sig.cpp" />
+    <Compile Include="x_req.cpp" />
+    <Compile Include="x_attrib.cpp" />
+    <Compile Include="x_bignum.cpp" />
+    <Compile Include="x_long.cpp" />
+    <Compile Include="x_name.cpp" />
+    <Compile Include="x_x509.cpp" />
+    <Compile Include="x_x509a.cpp" />
+    <Compile Include="x_crl.cpp" />
+    <Compile Include="x_info.cpp" />
+    <Compile Include="x_spki.cpp" />
+    <Compile Include="nsseq.cpp" />
+    <Compile Include="x_nx509.cpp" />
+    <Compile Include="d2i_pu.cpp" />
+    <Compile Include="d2i_pr.cpp" />
+    <Compile Include="i2d_pu.cpp" />
+    <Compile Include="i2d_pr.cpp" />
+    <Compile Include="t_req.cpp" />
+    <Compile Include="t_x509.cpp" />
+
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+  <ItemGroup>
+    <ExtraProjects Include="dotnetmf2.proj"/>
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

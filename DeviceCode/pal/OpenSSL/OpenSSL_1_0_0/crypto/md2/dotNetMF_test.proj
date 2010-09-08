@@ -1,0 +1,41 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\md2</Directory>
+    <AssemblyName>md2test</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <ProjectGuid>f0aaa86d-b586-420d-9cc4-899080a90a83</ProjectGuid>
+    <Subsystem>CONSOLE</Subsystem>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="md2test.cpp" />
+
+    <!--HFiles Include="KeyGen.h" /-->
+
+    <IncludePaths Include="Support\include"/>
+    <IncludePaths Include="DeviceCode\include"/>
+    <IncludePaths Include="CLR\Tools\include"/>
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\Clr\Tools\Tools.Settings" />
+  <ItemGroup>
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\md2\dotnetmf.proj" />
+    <DriverLibs Include="md2_openssl.$(LIB_EXT)" />
+  </ItemGroup>
+
+
+</Project>
+

@@ -1,0 +1,67 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>engine_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{3ba2a665-e924-4ffe-b2bd-0d8793be4380}</ProjectGuid>
+    <Description>Crypto ENGINE Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>engine_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\PAL\crypto\engine\dotNetMF.proj</ProjectPath>
+    <ManifestFile>asn1_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\engine</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="engine.h" />
+
+    <Compile Include="eng_err.cpp" />
+    <Compile Include="eng_lib.cpp" />
+    <Compile Include="eng_list.cpp" />
+    <Compile Include="eng_init.cpp" />
+    <Compile Include="eng_ctrl.cpp" />
+    <Compile Include="eng_table.cpp" />
+    <Compile Include="eng_pkey.cpp" />
+    <Compile Include="eng_fat.cpp" />
+    <Compile Include="eng_all.cpp" />
+    <Compile Include="tb_rsa.cpp" />
+    <Compile Include="tb_dsa.cpp" />
+    <Compile Include="tb_ecdsa.cpp" />
+    <Compile Include="tb_dh.cpp" />
+    <Compile Include="tb_ecdh.cpp" />
+    <Compile Include="tb_rand.cpp" />
+    <Compile Include="tb_store.cpp" />
+    <Compile Include="tb_cipher.cpp" />
+    <Compile Include="tb_digest.cpp" />
+    <Compile Include="tb_pkmeth.cpp" />
+    <Compile Include="tb_asnmth.cpp" />
+    <Compile Include="eng_openssl.cpp" />
+    <Compile Include="eng_cnf.cpp" />
+    <Compile Include="eng_dyn.cpp" />
+    <Compile Include="eng_cryptodev.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

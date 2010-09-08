@@ -1,0 +1,52 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>aes_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{aef9ab99-95bf-4bb9-9b8d-f2055d0a33cf}</ProjectGuid>
+    <Description>Crypto AES library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>aes_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\aes\dotNetMF.proj</ProjectPath>
+    <ManifestFile>aes_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\aes</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="aes.h" />
+    <HFiles Include="aes_locl.h" />
+
+    <Compile Include="aes_core.cpp" />
+    <Compile Include="aes_misc.cpp" />
+    <Compile Include="aes_ecb.cpp" />
+    <Compile Include="aes_cbc.cpp" />
+    <Compile Include="aes_cfb.cpp" />
+    <Compile Include="aes_ofb.cpp" />
+    <Compile Include="aes_ctr.cpp" />
+    <Compile Include="aes_ige.cpp" />
+    <Compile Include="aes_wrap.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

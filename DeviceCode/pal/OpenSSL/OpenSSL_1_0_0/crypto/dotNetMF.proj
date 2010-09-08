@@ -1,0 +1,155 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>crypto_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{c598feb8-818e-4981-9f46-df2294b7c1a3}</ProjectGuid>
+    <Description>Crypto Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>crypto_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\dotNetMF.proj</ProjectPath>
+    <ManifestFile>ssl_pal.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+
+  <ItemGroup>
+    <SubDirectories Include="aes"/>
+    <SubDirectories Include="asn1"/>
+    <SubDirectories Include="bf"/>
+    <SubDirectories Include="bio"/>
+    <SubDirectories Include="bn"/>
+    <SubDirectories Include="buffer"/>
+    <!--SubDirectories Include="camellia"/-->
+    <SubDirectories Include="cast"/>
+    <!--SubDirectories Include="cms"/-->
+    <SubDirectories Include="comp"/>
+    <SubDirectories Include="conf"/>
+    <SubDirectories Include="des"/>
+    <SubDirectories Include="dh"/>
+    <SubDirectories Include="dsa"/>
+    <SubDirectories Include="dso"/>
+    <SubDirectories Include="ec"/>
+    <SubDirectories Include="ecdh"/>
+    <SubDirectories Include="ecdsa"/>
+    <SubDirectories Include="engine"/>
+    <SubDirectories Include="err"/>
+    <SubDirectories Include="evp"/>
+    <SubDirectories Include="hmac"/>
+    <!--SubDirectories Include="idea"/-->
+    <!--SubDirectories Include="jpake"/-->
+    <!--SubDirectories Include="krb5"/-->
+    <SubDirectories Include="lhash"/>
+    <SubDirectories Include="md2"/>
+    <SubDirectories Include="md4"/>
+    <SubDirectories Include="md5"/>
+    <!--SubDirectories Include="mdc2"/-->
+    <SubDirectories Include="modes"/>
+    <SubDirectories Include="objects"/>
+    <SubDirectories Include="ocsp"/>
+    <SubDirectories Include="pem"/>
+    <SubDirectories Include="pkcs7"/>
+    <SubDirectories Include="pkcs12"/>
+    <SubDirectories Include="pqueue"/>
+    <SubDirectories Include="rand"/>
+    <SubDirectories Include="rc2"/>
+    <SubDirectories Include="rc4"/>
+    <!--SubDirectories Include="rc5"/-->
+    <SubDirectories Include="ripemd"/>
+    <SubDirectories Include="rsa"/>
+    <SubDirectories Include="seed"/>
+    <SubDirectories Include="sha"/>
+    <SubDirectories Include="stack"/>
+    <!--SubDirectories Include="store"/-->
+    <SubDirectories Include="ts"/>
+    <SubDirectories Include="txt_db"/>
+    <SubDirectories Include="ui"/>
+    <SubDirectories Include="whrlpool"/>
+    <SubDirectories Include="x509"/>
+    <SubDirectories Include="x509v3"/>
+ </ItemGroup>
+
+  <ItemGroup>
+    <!--HFiles Include="Commands.h" /-->
+
+    <Compile Include="cryptlib.cpp" />
+    <Compile Include="mem.cpp" />
+    <Compile Include="mem_clr.cpp" />
+    <Compile Include="mem_dbg.cpp" />
+    <Compile Include="cversion.cpp" />
+    <Compile Include="ex_data.cpp" />
+    <Compile Include="cpt_err.cpp" />
+    <Compile Include="ebcdic.cpp" />
+    <Compile Include="uid.cpp" />
+    <Compile Include="o_time.cpp" />
+    <Compile Include="o_str.cpp" />
+    <Compile Include="o_dir.cpp" />
+
+    <PlatformIndependentLibs Include="aes_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="asn1_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="asn1pt2_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="bf_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="bio_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="buffer_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="bn_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="cast_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="comp_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="conf_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="des_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="des_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="dh_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="dsa_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="dso_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ecdh_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ec_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ecdsa_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="engine_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="err_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="evp_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="hmac_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="lhash_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="md2_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="md4_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="md5_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="modes_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ocsp_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="objects_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="pem_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="pkcs7_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="pkcs12_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="pqueue_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="rand_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="rc2_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="rc4_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ripemd_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="rsa_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="seed_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="sha_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="stack_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ts_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="txt_db_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="ui_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="whrlpool_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="x509_openssl.$(LIB_EXT)" />
+    <PlatformIndependentLibs Include="x509v3_openssl.$(LIB_EXT)" />
+
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,27 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="
+        Support\FrameworkBase\dotnetmf.proj;
+        Framework\Tools\build.dirproj;
+        Framework\build.dirproj;
+        Solutions\Windows2\dotnetmf.proj"
+        />
+
+    <Project
+        Condition="'$(PORT_BUILD)'!=''" 
+        Include="Test\build.dirproj"
+        />
+
+    <Project 
+        Condition="'$(PORT_BUILD)'==''"
+        Include="
+        Product\build.dirproj;
+        CLR\Tools\PlatformDesigner\build.dirproj;
+        tools\scripts\port\Sample\build.dirproj"
+        />
+  </ItemGroup>
+
+</Project>

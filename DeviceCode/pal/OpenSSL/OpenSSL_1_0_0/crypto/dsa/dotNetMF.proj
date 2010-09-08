@@ -1,0 +1,57 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>dsa_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{c500826a-adf9-4c4b-9867-9dbd560d843e}</ProjectGuid>
+    <Description>Crypto DSA library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>dsa_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\dsa\dotNetMF.proj</ProjectPath>
+    <ManifestFile>dsa_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\dsa</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="dsa.h" />
+    <HFiles Include="dsa_locl.h" />
+
+    <Compile Include="dsa_gen.cpp" />
+    <Compile Include="dsa_key.cpp" />
+    <Compile Include="dsa_lib.cpp" />
+    <Compile Include="dsa_asn1.cpp" />
+    <Compile Include="dsa_vrf.cpp" />
+    <Compile Include="dsa_sign.cpp" />
+    <Compile Include="dsa_err.cpp" />
+    <Compile Include="dsa_ossl.cpp" />
+    <Compile Include="dsa_depr.cpp" />
+    <Compile Include="dsa_ameth.cpp" />
+    <Compile Include="dsa_pmeth.cpp" />
+    <Compile Include="dsa_prn.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\evp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

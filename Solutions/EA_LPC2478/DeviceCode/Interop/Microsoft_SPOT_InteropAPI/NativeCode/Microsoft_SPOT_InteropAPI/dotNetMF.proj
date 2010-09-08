@@ -1,0 +1,18 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\Interop\Microsoft_SPOT_InteropAPI\NativeCode\Microsoft_SPOT_InteropAPI</Directory>
+    <AssemblyName>Microsoft_SPOT_InteropAPI</AssemblyName>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+<ItemGroup>
+<HFile Include="InteropAPI.h" />
+<Compile Include="InteropAPI.cpp" />
+<Compile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API_mshl.cpp" />
+<HFile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API.h" />
+<Compile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API.cpp" />
+</ItemGroup>
+<Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

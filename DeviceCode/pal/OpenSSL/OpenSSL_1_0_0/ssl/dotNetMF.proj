@@ -1,0 +1,95 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>libssl_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{0710cb0c-378f-4eec-9916-4899c1322daa}</ProjectGuid>
+    <Description>SSL Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>libssl_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\PAL\OpenSSL\openssl_1_0_0\ssl\dotNetMF.proj</ProjectPath>
+    <ManifestFile>libssl_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\ssl</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="ssl.h" />
+    <HFiles Include="ssl2.h" />
+    <HFiles Include="ssl3.h" />
+    <HFiles Include="ssl23.h" />
+    <HFiles Include="tls1.h" />
+    <HFiles Include="dtls1.h" />
+    <HFiles Include="kssl.h" />
+    <HFiles Include="ssl_locl.h" />
+    <HFiles Include="kssl_lcl.h" />
+
+    <Compile Include="s2_meth.cpp" />
+    <Compile Include="s2_srvr.cpp" />
+    <Compile Include="s2_clnt.cpp" />
+    <Compile Include="s2_lib.cpp" />
+    <Compile Include="s2_enc.cpp" />
+    <Compile Include="s2_pkt.cpp" />
+    <Compile Include="s3_meth.cpp" />
+    <Compile Include="s3_srvr.cpp" />
+    <Compile Include="s3_clnt.cpp" />
+    <Compile Include="s3_lib.cpp" />
+    <Compile Include="s3_enc.cpp" />
+    <Compile Include="s3_pkt.cpp" />
+    <Compile Include="s3_both.cpp" />
+    <Compile Include="s23_meth.cpp" />
+    <Compile Include="s23_srvr.cpp" />
+    <Compile Include="s23_clnt.cpp" />
+    <Compile Include="s23_lib.cpp" />
+    <Compile Include="s23_pkt.cpp" />
+    <Compile Include="t1_meth.cpp" />
+    <Compile Include="t1_srvr.cpp" />
+    <Compile Include="t1_clnt.cpp" />
+    <Compile Include="t1_lib.cpp" />
+    <Compile Include="t1_enc.cpp" />
+    <Compile Include="d1_meth.cpp" />
+    <Compile Include="d1_srvr.cpp" />
+    <Compile Include="d1_clnt.cpp" />
+    <Compile Include="d1_lib.cpp" />
+    <Compile Include="d1_pkt.cpp" />
+    <Compile Include="d1_both.cpp" />
+    <Compile Include="d1_enc.cpp" />
+    <Compile Include="ssl_lib.cpp" />
+    <Compile Include="ssl_err2.cpp" />
+    <Compile Include="ssl_cert.cpp" />
+    <Compile Include="ssl_sess.cpp" />
+    <Compile Include="ssl_ciph.cpp" />
+    <Compile Include="ssl_stat.cpp" />
+    <Compile Include="ssl_rsa.cpp" />
+    <Compile Include="ssl_asn1.cpp" />
+    <Compile Include="ssl_txt.cpp" />
+    <Compile Include="ssl_algs.cpp" />
+    <Compile Include="bio_ssl.cpp" />
+    <Compile Include="ssl_err.cpp" />
+    <Compile Include="kssl.cpp" />
+    <Compile Include="t1_reneg.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\ssl" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

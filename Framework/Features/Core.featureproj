@@ -1,0 +1,29 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <FeatureName>Core</FeatureName>
+  </PropertyGroup>
+  <ItemGroup>
+    <InteropFeature Include="mscorlib" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\mscorlib.pe" />
+    <RequiredManagedProjects Include="$(SPOCLIENT)\Framework\Subset_of_CorLib\SpotCorLib.csproj" Condition="'$(AUTOMATED_BUILD)'==''" />
+
+    <InteropFeature Include="Microsoft_SPOT_Native" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\mscorlib.pe" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\Microsoft.SPOT.Native.pe" />    
+    <RequiredManagedProjects Include="$(SPOCLIENT)\Framework\Core\Native\Core_Native.csproj" Condition="'$(AUTOMATED_BUILD)'==''" />
+  </ItemGroup>
+  <ItemGroup>
+    <RequiredProjects Include="$(SPOCLIENT)\CLR\Core\dotnetmf.proj" />
+    <RequiredProjects Include="$(SPOCLIENT)\CLR\StartupLib\dotnetmf.proj" />
+    <RequiredProjects Include="$(SPOCLIENT)\CLR\Libraries\CorLib\dotnetmf.proj" />
+    <RequiredProjects Include="$(SPOCLIENT)\CLR\Libraries\SPOT\dotnetmf.proj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <Description>Core functionality (required)</Description>
+    <Guid>{fde96751-f081-449d-a471-4a438575de4a}</Guid>
+    <Required>true</Required>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+  </PropertyGroup>
+</Project>

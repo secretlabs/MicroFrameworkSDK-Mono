@@ -1,0 +1,35 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\ssl</Directory>
+    <AssemblyName>ssltest</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <ProjectGuid>66480a4e-b2ea-41fc-8b43-2b636c8d260a</ProjectGuid>
+    <Subsystem>CONSOLE</Subsystem>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+
+  <ItemGroup>
+    <Compile Include="ssltest.cpp" />
+
+    <!--HFiles Include="KeyGen.h" /-->
+
+    <IncludePaths Include="Support\include"/>
+    <IncludePaths Include="DeviceCode\include"/>
+    <IncludePaths Include="CLR\Tools\include"/>
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\Clr\Tools\Tools.Settings" />
+
+
+</Project>
+

@@ -1,0 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+
+using namespace Microsoft::SPOT::Emulator;
+
+INT32 HAL_TIMESERVICE_GetTimeFromSNTPServer(UINT8* serverIP, SYSTEMTIME* systemTime)
+{
+    /// We don't contact SNTP server for real, rather assuming desktop had been
+    /// doing this already, so we retrieve desktops system time as UTC.
+    ::GetSystemTime(systemTime);
+
+    return 0;
+}
+
+INT32 HAL_TIMESERVICE_GetTimeFromSNTPServerList(UINT8* serverIP, INT32 serverNum, SYSTEMTIME* systemTime)
+{
+    ::GetSystemTime(systemTime);
+
+    return 0;
+}

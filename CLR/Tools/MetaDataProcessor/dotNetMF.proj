@@ -1,0 +1,32 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>CLR\Tools\MetaDataProcessor</Directory>
+    <AssemblyName>MetaDataProcessor</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <VCProjName>MetaDataProcessor</VCProjName>
+    <ProjectGuid>84E90FC3-9AAA-436A-B369-EAB92194EC9E</ProjectGuid>
+    <Subsystem>CONSOLE</Subsystem>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <ItemGroup>
+    <Compile Include="MetaDataProcessor.cpp"/>
+    <Compile Include="KeyGen.cpp" />
+
+    <HFiles Include="KeyGen.h" />
+    <HFiles Include="stdafx.h" />
+
+    <IncludePaths Include="Support\include"/>
+    <IncludePaths Include="DeviceCode\include"/>
+    <IncludePaths Include="CLR\Tools\include"/>
+
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\Clr\Tools\Tools.Settings" />
+
+</Project>
+

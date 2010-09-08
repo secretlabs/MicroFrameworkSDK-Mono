@@ -1,0 +1,85 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>asn1pt2_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{5043b4d2-11a1-4031-9100-6cd5dd83ec4a}</ProjectGuid>
+    <Description>Crypto ASN1 Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>asn1pt2_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\PAL\OpenSSL\OpenSSL_1_0_0\crypto\asn1\dotNetMF.proj</ProjectPath>
+    <ManifestFile>asn1pt2_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="asn1.h" />
+    <HFiles Include="asn1_mac.h" />
+    <HFiles Include="asn1t.h" />
+
+    <Compile Include="t_x509a.cpp" />
+    <Compile Include="t_crl.cpp" />
+    <Compile Include="t_pkey.cpp" />
+    <Compile Include="t_spki.cpp" />
+    <Compile Include="t_bitst.cpp" />
+    <Compile Include="tasn_new.cpp" />
+    <Compile Include="tasn_fre.cpp" />
+    <Compile Include="tasn_enc.cpp" />
+    <Compile Include="tasn_dec.cpp" />
+    <Compile Include="tasn_utl.cpp" />
+    <Compile Include="tasn_typ.cpp" />
+    <Compile Include="tasn_prn.cpp" />
+    <Compile Include="ameth_lib.cpp" />
+    <Compile Include="f_int.cpp" />
+    <Compile Include="f_string.cpp" />
+    <Compile Include="n_pkey.cpp" />
+    <Compile Include="f_enum.cpp" />
+    <Compile Include="x_pkey.cpp" />
+    <Compile Include="a_bool.cpp" />
+    <Compile Include="x_exten.cpp" />
+    <Compile Include="bio_asn1.cpp" />
+    <Compile Include="bio_ndef.cpp" />
+    <Compile Include="asn_mime.cpp" />
+    <Compile Include="asn1_gen.cpp" />
+    <Compile Include="asn1_par.cpp" />
+    <Compile Include="asn1_lib.cpp" />
+    <Compile Include="asn1_err.cpp" />
+    <Compile Include="evp_asn1.cpp" />
+    <Compile Include="asn_pack.cpp" />
+    <Compile Include="p5_pbe.cpp" />
+    <Compile Include="p5_pbev2.cpp" />
+    <Compile Include="p8_pkey.cpp" />
+    <Compile Include="asn_moid.cpp" />
+    <Compile Include="a_bytes.cpp" />
+    <Compile Include="a_strnid.cpp" />
+    <Compile Include="evp_asn1.cpp" />
+    <Compile Include="asn_pack.cpp" />
+    <Compile Include="p5_pbe.cpp" />
+    <Compile Include="p5_pbev2.cpp" />
+    <Compile Include="p8_pkey.cpp" />
+    <Compile Include="asn_moid.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

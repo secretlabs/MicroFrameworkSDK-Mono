@@ -1,0 +1,55 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Debugger</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>731B6E1A-4214-4e36-B2C7-82EEC97C3E81</ProjectGuid>
+    <Description>Visual Studio debugging support</Description>
+    <Level>CLR</Level>
+    <LibraryFile>Debugger.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\CLR\Debugger\dotNetMF.proj</ProjectPath>
+    <ManifestFile>Debugger.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Debugger</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Debugger_CLR" Guid="{F7BC2FA2-00B7-4CC3-97E1-7088CECF0C45}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>True</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>CLR\Debugger</Directory>
+    <OutputType>Library</OutputType>
+    <HasAuxTargets>true</HasAuxTargets>
+    <NoOptForParserTarget>Release</NoOptForParserTarget>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\Framework\Features\Debugger_flavor_CLR.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\COM_PAL.libcatproj" />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="Debugger.cpp" />
+    <ExtraProjects Include="dotNetMF_extended.proj" />
+    <ExtraProjects Include="dotNetMF_full.proj" />
+    <ExtraProjects Include="dotNetMF_minimal.proj" />
+    <ExtraProjects Include="dotNetMF_Stub.proj" />
+    <IncludePaths Include="CLR\core" />
+    <IncludePaths Include="CLR\libraries\corlib" />
+    <IncludePaths Include="CLR\libraries\SPOT" />
+    <IncludePaths Include="CLR\libraries\SPOT_Hardware" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

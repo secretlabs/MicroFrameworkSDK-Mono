@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>.</Directory>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />	
+
+  <ItemGroup Condition="!EXISTS('$(BUILD_ROOT)\$(Configuration)\Server\DLL\Microsoft.SPOT.Emulator.Interface.dll')">
+    <RequiredProjects Include="$(SPOCLIENT)\Framework\Tools\BuildTasks.dirproj" />
+    <RequiredProjects Include="$(SPOCLIENT)\clr\tools\dotnetmf.proj" />
+    <RequiredManagedProjects Include="$(SPOCLIENT)\clr\tools\EmulatorInterface\EmulatorInterface.csproj"/>
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+
+</Project>

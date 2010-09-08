@@ -1,0 +1,101 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>evp_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{71e64a68-f021-497a-a09a-f69f8413fcdc}</ProjectGuid>
+    <Description>Crypto EVP Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>evp_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\PAL\crypto\evp\dotNetMF.proj</ProjectPath>
+    <ManifestFile>asn1_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\evp</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="evp.h" />
+    <HFiles Include="evp_locl.h" />
+
+    <Compile Include="encode.cpp" />
+    <Compile Include="digest.cpp" />
+    <Compile Include="evp_enc.cpp" />
+    <Compile Include="evp_key.cpp" />
+    <Compile Include="evp_acnf.cpp" />
+    <Compile Include="e_des.cpp" />
+    <Compile Include="e_bf.cpp" />
+    <Compile Include="e_idea.cpp" />
+    <Compile Include="e_des3.cpp" />
+    <Compile Include="e_camellia.cpp" />
+    <Compile Include="e_rc4.cpp" />
+    <Compile Include="e_aes.cpp" />
+    <Compile Include="names.cpp" />
+    <Compile Include="e_seed.cpp" />
+    <Compile Include="e_xcbc_d.cpp" />
+    <Compile Include="e_rc2.cpp" />
+    <Compile Include="e_cast.cpp" />
+    <Compile Include="e_rc5.cpp" />
+    <Compile Include="m_null.cpp" />
+    <Compile Include="m_md2.cpp" />
+    <Compile Include="m_md4.cpp" />
+    <Compile Include="m_md5.cpp" />
+    <Compile Include="m_sha.cpp" />
+    <Compile Include="m_sha1.cpp" />
+    <Compile Include="m_wp.cpp" />
+    <Compile Include="m_dss.cpp" />
+    <Compile Include="m_dss1.cpp" />
+    <Compile Include="m_mdc2.cpp" />
+    <Compile Include="m_ripemd.cpp" />
+    <Compile Include="m_ecdsa.cpp" />
+    <Compile Include="p_open.cpp" />
+    <Compile Include="p_seal.cpp" />
+    <Compile Include="p_sign.cpp" />
+    <Compile Include="p_verify.cpp" />
+    <Compile Include="p_lib.cpp" />
+    <Compile Include="p_enc.cpp" />
+    <Compile Include="p_dec.cpp" />
+    <Compile Include="bio_md.cpp" />
+    <Compile Include="bio_b64.cpp" />
+    <Compile Include="bio_enc.cpp" />
+    <Compile Include="evp_err.cpp" />
+    <Compile Include="e_null.cpp" />
+    <Compile Include="c_all.cpp" />
+    <Compile Include="c_allc.cpp" />
+    <Compile Include="c_alld.cpp" />
+    <Compile Include="evp_lib.cpp" />
+    <Compile Include="bio_ok.cpp" />
+    <Compile Include="evp_pkey.cpp" />
+    <Compile Include="evp_pbe.cpp" />
+    <Compile Include="p5_crpt.cpp" />
+    <Compile Include="p5_crpt2.cpp" />
+    <Compile Include="e_old.cpp" />
+    <Compile Include="pmeth_lib.cpp" />
+    <Compile Include="pmeth_fn.cpp" />
+    <Compile Include="pmeth_gn.cpp" />
+    <Compile Include="m_sigver.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\evp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

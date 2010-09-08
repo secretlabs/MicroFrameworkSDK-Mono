@@ -1,0 +1,18 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>CortexM3 sample solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{c83de4e7-8f58-4edb-9a04-0216f6437e39}</PlatformGuid>
+    <TARGETPLATFORM>CORTEXM3_SAMPLE</TARGETPLATFORM>
+    <PLATFORM>CORTEXM3_SAMPLE</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\CortexM3_sample" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\CortexM3\CortexM3.settings" />
+</Project>

@@ -1,0 +1,102 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>sockets_hal_sockets_lwIP</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{4bd35de1-8bcb-47a4-8c7a-90cc1976be76}</ProjectGuid>
+    <Description>Network async abstraction layer</Description>
+    <Level>PAL</Level>
+    <LibraryFile>sockets_hal_sockets_lwIP.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\lwip\lwip_1_3_2\src\dotnetmf_sockets.proj</ProjectPath>
+    <ManifestFile>sockets_hal_sockets_lwIP.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Network</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="NetworkStack_PAL" Guid="{53634488-41DF-4696-8186-5EA5F846BA14}" ProjectPath="" Conditional="" xmlns="">
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>LWIP</CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\lwip\lwip_1_3_2\src</Directory>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <Compile Include="api\api_lib.c" />
+    <Compile Include="api\api_msg.c" />
+    <Compile Include="api\err.c" />
+    <Compile Include="api\netbuf.c" />
+    <Compile Include="api\netdb.c" />
+    <Compile Include="api\netifapi.c" />
+    <Compile Include="api\sockets.c" />
+    <Compile Include="core\dns.c" />
+    <Compile Include="core\init.c" />
+    <Compile Include="core\mem.c" />
+    <Compile Include="core\memp.c" />
+    <Compile Include="core\netif.c" />
+    <Compile Include="core\pbuf.c" />
+    <Compile Include="core\raw.c" />
+    <Compile Include="core\stats.c" />
+    <Compile Include="core\sys.c" />
+    <Compile Include="core\snmp\asn1_dec.c" />
+    <Compile Include="core\snmp\asn1_enc.c" />
+    <Compile Include="core\snmp\mib2.c" />
+    <Compile Include="core\snmp\mib_structs.c" />
+    <Compile Include="core\snmp\msg_in.c" />
+    <Compile Include="core\snmp\msg_out.c" />
+    <Compile Include="netif\etharp.c" />
+    <Compile Include="netif\ethernetif.c" />
+    <Compile Include="netif\loopif.c" />
+    <Compile Include="netif\slipif.c" />
+    <Compile Include="netif\ppp\auth.c" />
+    <Compile Include="netif\ppp\chap.c" />
+    <Compile Include="netif\ppp\chpms.c" />
+    <Compile Include="netif\ppp\fsm.c" />
+    <Compile Include="netif\ppp\ipcp.c" />
+    <Compile Include="netif\ppp\lcp.c" />
+    <Compile Include="netif\ppp\magic.c" />
+    <Compile Include="netif\ppp\md5.c" />
+    <Compile Include="netif\ppp\pap.c" />
+    <Compile Include="netif\ppp\ppp.c" />
+    <Compile Include="netif\ppp\ppp_oe.c" />
+    <Compile Include="netif\ppp\randm.c" />
+    <Compile Include="netif\ppp\vj.c" />
+
+    <IncludePaths Include="DeviceCode\Drivers\Ethernet\enc28j60" />
+    <IncludePaths Include="DeviceCode\Drivers\Ethernet\loopback" />
+    <IncludePaths Include="DeviceCode\pal\net" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\lwip" />
+    <!-- lwIP does NOT support ipv4 and ipv6 at the same time -->
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\ipv4" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\netif" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\proj\lwIPv4lib" />
+    <IncludePaths Include="DeviceCode\pal\lwip\contrib\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\tinyclr"/>    
+    <IncludePaths Include="DeviceCode\pal\lwip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\lwip\tinyclr" />
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\Framework\Features\Network_Config_HAL.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\EthernetDriver_HAL.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\EthernetLoopback_HAL.libcatproj"/>
+  <Import Project="$(SPOCLIENT)\Framework\Features\Sockets_async_PAL.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\Sockets_dhcp_PAL.libcatproj"/>
+  <Import Project="$(SPOCLIENT)\Framework\Features\Sockets_tcp_PAL.libcatproj"/>
+  <Import Project="$(SPOCLIENT)\Framework\Features\Sockets_udp_PAL.libcatproj"/>
+  <Import Project="$(SPOCLIENT)\Framework\Features\SocketDriver_LWIP_PAL.libcatproj" />
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

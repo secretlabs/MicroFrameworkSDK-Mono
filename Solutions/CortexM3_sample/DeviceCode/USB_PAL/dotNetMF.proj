@@ -1,0 +1,48 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>USB_PAL_CORTEXM3_SAMPLE</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{0C6D667D-4E16-430F-AC65-23409AA1C0C9}</ProjectGuid>
+    <Description>USB CORTEXM3_SAMPLE driver</Description>
+    <Level>PAL</Level>
+    <LibraryFile>USB_PAL_CORTEXM3_SAMPLE.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\CortexM3_sample\DeviceCode\USB_PAL\dotNetMF.proj</ProjectPath>
+    <ManifestFile>USB_PAL_CORTEXM3_SAMPLE.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>USB</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="USB_PAL" Guid="{A25658BA-4C02-45BB-AD8C-191DCD99D8F0}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsCORTEXM3_SAMPLE>True</IsCORTEXM3_SAMPLE>
+    <Directory>Solutions\CortexM3_sample\DeviceCode\USB_PAL</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="usb_config.cpp" />
+    <Compile Include="usb_CORTEXM3_SAMPLE.cpp" />
+    <IncludePaths Include="DeviceCode\include" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

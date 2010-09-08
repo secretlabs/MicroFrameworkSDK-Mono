@@ -1,0 +1,52 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>SPOT_Crypto</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>24510136-2F54-447c-9A52-A0602139F8F2</ProjectGuid>
+    <Description>Crypto interop library</Description>
+    <Level>CLR</Level>
+    <LibraryFile>SPOT_Crypto.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\CLR\Libraries\SPOT\SPOT_Crypto\dotNetMF.proj</ProjectPath>
+    <ManifestFile>SPOT_Crypto.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Cryptography</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SPOT_Crypto_CLR" Guid="{9E3F6F14-326C-4EE5-8771-685ACA642D50}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>True</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>CLR\Libraries\SPOT\SPOT_Crypto</Directory>
+    <OutputType>Library</OutputType>
+    <VCProjName>Lib_SPOT_Crypto</VCProjName>
+    <NoOptForParserTarget>Release</NoOptForParserTarget>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <FastCompileCPPFile Include="spot_crypto_fastcompile.cpp" />
+    <Compile Include="spot_native_Microsoft_SPOT_Cryptography_Key.cpp" />
+    <Compile Include="spot_native_Microsoft_SPOT_Cryptography_Key_RSA.cpp" />
+    <Compile Include="spot_native_Microsoft_SPOT_Cryptography_Key_TinyEncryptionAlgorithm.cpp" />
+    <IncludePaths Include="CLR\libraries\corlib" />
+    <IncludePaths Include="CLR\libraries\SPOT" />
+  </ItemGroup>
+  <ItemGroup>
+    <ExtraProjects Include="dotNetMF_Stub.proj" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

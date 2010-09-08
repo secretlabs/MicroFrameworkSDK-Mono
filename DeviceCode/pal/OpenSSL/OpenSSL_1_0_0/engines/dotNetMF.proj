@@ -1,0 +1,62 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>engines_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{8f4d3b67-877a-42f0-999f-2b989f532722}</ProjectGuid>
+    <Description>SSL Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>engines_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\engines\dotNetMF.proj</ProjectPath>
+    <ManifestFile>engines_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\engines</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="e_aep_err.h" />
+    <HFiles Include="e_4758cca_err.h" />
+    <HFiles Include="e_atalla_err.h" />
+    <HFiles Include="e_capi_err.h" />
+    <HFiles Include="e_chil_err.h" />
+    <HFiles Include="e_cswift_err.h" />
+    <HFiles Include="e_gmp_err.h" />
+    <HFiles Include="e_nuron_err.h" />
+    <HFiles Include="e_sureware_err.h" />
+    <HFiles Include="e_ubsec_err.h" />
+
+    <Compile Include="e_4758cca.cpp" />
+    <Compile Include="e_aep.cpp" />
+    <Compile Include="e_atalla.cpp" />
+    <Compile Include="e_cswift.cpp" />
+    <Compile Include="e_gmp.cpp" />
+    <Compile Include="e_chil.cpp" />
+    <Compile Include="e_nuron.cpp" />
+    <Compile Include="e_sureware.cpp" />
+    <Compile Include="e_ubsec.cpp" />
+    <Compile Include="e_padlock.cpp" />
+    <Compile Include="e_capi.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

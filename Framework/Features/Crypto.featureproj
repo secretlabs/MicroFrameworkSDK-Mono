@@ -1,0 +1,16 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <FeatureName>Crypto</FeatureName>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\Framework\Features\Crypto.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\SPOT_Crypto_CLR.libcatproj" />
+  <Import Project="$(SPOCLIENT)\Framework\Features\Security_HAL.libcatproj" />
+  <PropertyGroup>
+    <Description>Cryptographic functionality</Description>
+    <Guid>{f504ee8b-1831-44dd-a645-801905928d5a}</Guid>
+    <Groups>
+    </Groups>
+    <Documentation>
+    </Documentation>
+  </PropertyGroup>
+</Project>

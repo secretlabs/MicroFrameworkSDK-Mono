@@ -1,0 +1,24 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Atmel AT91 SAM7X_EK solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{2afb0bdf-9f1a-4e3e-8e81-5eb41458a8a8}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB</INSTRUCTION_SET>
+    <TARGETPLATFORM>SAM7X_EK</TARGETPLATFORM>
+    <PLATFORM>SAM7X_EK</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+
+    <PLATFORM_HEAP_SIZE_THRESHOLD>10240</PLATFORM_HEAP_SIZE_THRESHOLD>
+    <PLATFORM_HEAP_SIZE_THRESHOLD_UPPER>15360</PLATFORM_HEAP_SIZE_THRESHOLD_UPPER>
+
+
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SAM7X_EK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM7X.settings" />
+</Project>

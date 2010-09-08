@@ -1,0 +1,32 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>CortexM3</Name>
+    <CpuName>Cortex-M3</CpuName>
+    <DefaultISA>THUMB2</DefaultISA>
+    <Guid>{e9fe81f3-4f86-4d86-a933-000363ae8a6c}</Guid>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\CortexM3\CortexM3.settings</ProjectPath>
+    <PLATFORM_FAMILY>ARM</PLATFORM_FAMILY>
+    <CustomFilter>Cortex</CustomFilter>
+    <INSTRUCTION_SET>THUMB2</INSTRUCTION_SET>
+    <TARGETPROCESSOR>CortexM3</TARGETPROCESSOR>
+    <TARGETCODEBASE>CortexM3</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='RVDS'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">Cortex-M3</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{1942C531-3AAC-4abb-8B4F-C3111012F9D9}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='MDK'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">DLM</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{CD24C1A5-2641-4460-AC5A-093B1C6D3D8B}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\CortexM3" />
+  </ItemGroup>
+</Project>

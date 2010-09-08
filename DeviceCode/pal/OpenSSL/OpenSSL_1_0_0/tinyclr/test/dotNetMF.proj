@@ -1,0 +1,71 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>ssl_tests_pal</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{6f4f1db1-6463-4298-9c81-92f16c962948}</ProjectGuid>
+    <Description>Crypto Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>ssl_tests_pal.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\tinyclr\test\dotNetMF.proj</ProjectPath>
+    <ManifestFile>ssl_tests_pal.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\tinyclr\test</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+
+
+  <ItemGroup>
+    <HFiles Include="ssl_tests.h" />
+
+    <Compile Include="ssl_test_bf.cpp" />
+    <Compile Include="ssl_test_bn.cpp" />
+    <Compile Include="ssl_test_exp.cpp" />
+    <Compile Include="ssl_test_cast.cpp" />
+    <Compile Include="ssl_test_des.cpp" />
+    <Compile Include="ssl_test_dh.cpp" />
+    <Compile Include="ssl_test_dsa.cpp" />
+    <Compile Include="ssl_test_ec.cpp" />
+    <Compile Include="ssl_test_ecdh.cpp" />
+    <Compile Include="ssl_test_ecdsa.cpp" />
+    <Compile Include="ssl_test_engine.cpp" />
+    <Compile Include="ssl_test_evp.cpp" />
+    <Compile Include="ssl_test_hmac.cpp" />
+    <Compile Include="ssl_test_idea.cpp" />
+    <Compile Include="ssl_test_md2.cpp" />
+    <Compile Include="ssl_test_md4.cpp" />
+    <Compile Include="ssl_test_md5.cpp" />
+    <Compile Include="ssl_test_pqueue.cpp" />
+    <Compile Include="ssl_test_rand.cpp" />
+    <Compile Include="ssl_test_rc2.cpp" />
+    <Compile Include="ssl_test_rc4.cpp" />
+    <Compile Include="ssl_test_rc5.cpp" />
+    <Compile Include="ssl_test_ripemd.cpp" />
+    <Compile Include="ssl_test_rsa.cpp" />
+    <Compile Include="ssl_test_sha.cpp" />
+    <Compile Include="ssl_test_sha1.cpp" />
+    <Compile Include="ssl_test_sha256.cpp" />
+    <Compile Include="ssl_test_sha512.cpp" />
+    <Compile Include="ssl_test_whrlpool.cpp" />
+    <Compile Include="ssl_test_x509v3.cpp" />
+
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+    <IncludePaths Include="DeviceCode\pal\COM\sockets\openssl" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,57 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>pem_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{7e18a5c3-663c-4c8b-b610-0e55c0c91064}</ProjectGuid>
+    <Description>Crypto PEM library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>pem_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pem\dotNetMF.proj</ProjectPath>
+    <ManifestFile>pem_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pem</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="pem.h" />
+    <HFiles Include="pem2.h" />
+
+    <Compile Include="pem_sign.cpp" />
+    <Compile Include="pem_seal.cpp" />
+    <Compile Include="pem_info.cpp" />
+    <Compile Include="pem_lib.cpp" />
+    <Compile Include="pem_all.cpp" />
+    <Compile Include="pem_err.cpp" />
+    <Compile Include="pem_x509.cpp" />
+    <Compile Include="pem_xaux.cpp" />
+    <Compile Include="pem_oth.cpp" />
+    <Compile Include="pem_pk8.cpp" />
+    <Compile Include="pem_pkey.cpp" />
+    <Compile Include="pvkfmt.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\evp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

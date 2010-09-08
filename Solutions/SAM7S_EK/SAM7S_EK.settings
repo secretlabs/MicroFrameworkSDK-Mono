@@ -1,0 +1,21 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Jennifer Cheng</Author>
+    <Description>SAM7s platform</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{c0a72165-b505-49ce-b7bc-7b3e0a601124}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB</INSTRUCTION_SET>
+    <TARGETPLATFORM>SAM7S_EK</TARGETPLATFORM>
+    <PLATFORM>SAM7S_EK</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <PLATFORM_NO_APPDOMAINS>true</PLATFORM_NO_APPDOMAINS>
+    <PLATFORM_EMULATED_FLOATINGPOINT>true</PLATFORM_EMULATED_FLOATINGPOINT>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SAM7S_EK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM7s.settings" />
+</Project>

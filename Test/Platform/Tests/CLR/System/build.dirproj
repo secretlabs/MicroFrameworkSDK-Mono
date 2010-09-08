@@ -1,0 +1,90 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="IO\IOTestsHelper\IOTestsHelper.csproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\IOTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\IOTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\Path\PathTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\Path\PathTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\Directory\DirectoryTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\Directory\DirectoryTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\File\FileTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\File\FileTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\FileStream\FileStreamTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\FileStream\FileStreamTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="IO\MemoryStream\MemoryStreamTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="IO\MemoryStream\MemoryStreamTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="netTests\netTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="netTests\netTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="socketTests\socketTests.csproj" >
+      <InProject>false</InProject>
+    </Project>    
+    <Project Include="socketTests\socketTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="xmlTests\xmlTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="xmlTests\xmlTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="SPOTXmlTests\SPOTXmlTests.csproj" >
+      <InProject>false</InProject>
+    </Project>
+    <Project Include="SPOTXmlTests\SPOTXmlTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>   
+
+    <Project Include="Http\HttpTests.csproj" >
+      <InProject>false</InProject>
+    </Project>    
+    <Project Include="Http\HttpTests.slnproj" >
+      <InProject>false</InProject>
+    </Project>
+
+    <Project Include="SystemTests.wixproj" >
+      <InProject>false</InProject>
+    </Project>
+
+  </ItemGroup>
+</Project>

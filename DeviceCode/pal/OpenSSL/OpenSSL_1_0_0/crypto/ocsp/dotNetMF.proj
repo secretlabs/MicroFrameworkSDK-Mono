@@ -1,0 +1,51 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>ocsp_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{564ba7ea-d8b6-4f68-880e-53c1acdf603c}</ProjectGuid>
+    <Description>Crypto OCSP library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>ocsp_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\ocsp\dotNetMF.proj</ProjectPath>
+    <ManifestFile>ocsp_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\ocsp</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="ocsp.h" />
+
+    <Compile Include="ocsp_asn.cpp" />
+    <Compile Include="ocsp_ext.cpp" />
+    <Compile Include="ocsp_ht.cpp" />
+    <Compile Include="ocsp_lib.cpp" />
+    <Compile Include="ocsp_cl.cpp" />
+    <Compile Include="ocsp_srv.cpp" />
+    <Compile Include="ocsp_prn.cpp" />
+    <Compile Include="ocsp_vfy.cpp" />
+    <Compile Include="ocsp_err.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

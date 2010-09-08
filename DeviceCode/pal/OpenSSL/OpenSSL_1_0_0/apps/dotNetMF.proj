@@ -1,0 +1,85 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\apps</Directory>
+    <AssemblyName>openssl</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <ProjectGuid>993be63c-1e62-4fbc-8202-a175c9e9322e</ProjectGuid>
+    <Subsystem>CONSOLE</Subsystem>
+    <MFSettingsFile>$(SPOCLIENT)\Solutions\Windows2\Windows2.settings</MFSettingsFile>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <PropertyGroup>
+    <OPENSSLLIBRARIES>true</OPENSSLLIBRARIES>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <HFiles Include="apps.h" />
+    <HFiles Include="progs.h" />
+    <HFiles Include="s_apps.h" />
+    <HFiles Include="testdsa.h" />
+    <HFiles Include="testrsa.h" />
+
+    <Compile Include="verify.cpp" />
+    <Compile Include="asn1pars.cpp" />
+    <Compile Include="req.cpp" />
+    <Compile Include="dgst.cpp" />
+    <Compile Include="dh.cpp" />
+    <Compile Include="dhparam.cpp" />
+    <Compile Include="enc.cpp" />
+    <Compile Include="passwd.cpp" />
+    <Compile Include="gendh.cpp" />
+    <Compile Include="errstr.cpp" />
+    <Compile Include="ca.cpp" />
+    <Compile Include="pkcs7.cpp" />
+    <Compile Include="crl2p7.cpp" />
+    <Compile Include="crl.cpp" />
+    <Compile Include="rsa.cpp" />
+    <Compile Include="rsautl.cpp" />
+    <Compile Include="dsa.cpp" />
+    <Compile Include="dsaparam.cpp" />
+    <Compile Include="ec.cpp" />
+    <Compile Include="ecparam.cpp" />
+    <Compile Include="x509.cpp" />
+    <Compile Include="genrsa.cpp" />
+    <Compile Include="gendsa.cpp" />
+    <Compile Include="genpkey.cpp" />
+    <Compile Include="s_server.cpp" />
+    <Compile Include="s_client.cpp" />
+    <Compile Include="speed.cpp" />
+    <Compile Include="s_time.cpp" />
+    <Compile Include="apps.cpp" />
+    <Compile Include="s_cb.cpp" />
+    <Compile Include="s_socket.cpp" />
+    <Compile Include="app_rand.cpp" />
+    <Compile Include="version.cpp" />
+    <Compile Include="sess_id.cpp" />
+    <Compile Include="ciphers.cpp" />
+    <Compile Include="nseq.cpp" />
+    <Compile Include="pkcs12.cpp" />
+    <Compile Include="pkcs8.cpp" />
+    <Compile Include="pkey.cpp" />
+    <Compile Include="pkeyparam.cpp" />
+    <Compile Include="pkeyutl.cpp" />
+    <Compile Include="spkac.cpp" />
+    <Compile Include="smime.cpp" />
+    <Compile Include="cms.cpp" />
+    <Compile Include="rand.cpp" />
+    <Compile Include="engine.cpp" />
+    <Compile Include="ocsp.cpp" />
+    <Compile Include="prime.cpp" />
+    <Compile Include="ts.cpp" />
+    <Compile Include="openssl.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+
+
+  <Import Project="$(SPOCLIENT)\Clr\Tools\Tools.Settings" />
+</Project>

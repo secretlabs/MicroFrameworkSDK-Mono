@@ -1,0 +1,8 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+    <MajorVersion>4</MajorVersion>
+    <MinorVersion>1</MinorVersion>
+    <BuildNumber>2821</BuildNumber>
+    <RevisionNumber>0</RevisionNumber>
+</PropertyGroup>
+</Project>

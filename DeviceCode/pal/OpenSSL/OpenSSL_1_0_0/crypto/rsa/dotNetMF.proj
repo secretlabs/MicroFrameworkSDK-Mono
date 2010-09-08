@@ -1,0 +1,63 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>rsa_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{95383b5e-bf03-43cf-811f-bcd7d6a20fbc}</ProjectGuid>
+    <Description>Crypto RSA library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>rsa_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\rsa\dotNetMF.proj</ProjectPath>
+    <ManifestFile>rsa_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\rsa</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="rsa.h" />
+
+    <Compile Include="rsa_eay.cpp" />
+    <Compile Include="rsa_gen.cpp" />
+    <Compile Include="rsa_lib.cpp" />
+    <Compile Include="rsa_sign.cpp" />
+    <Compile Include="rsa_saos.cpp" />
+    <Compile Include="rsa_err.cpp" />
+    <Compile Include="rsa_pk1.cpp" />
+    <Compile Include="rsa_ssl.cpp" />
+    <Compile Include="rsa_none.cpp" />
+    <Compile Include="rsa_oaep.cpp" />
+    <Compile Include="rsa_chk.cpp" />
+    <Compile Include="rsa_null.cpp" />
+    <Compile Include="rsa_pss.cpp" />
+    <Compile Include="rsa_x931.cpp" />
+    <Compile Include="rsa_asn1.cpp" />
+    <Compile Include="rsa_depr.cpp" />
+    <Compile Include="rsa_ameth.cpp" />
+    <Compile Include="rsa_prn.cpp" />
+    <Compile Include="rsa_pmeth.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\asn1" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\evp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,57 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>pkcs12_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{ce8af166-459e-494e-ba10-288aa39c776b}</ProjectGuid>
+    <Description>Crypto PKCS12 library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>pkcs12_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pkcs12\dotNetMF.proj</ProjectPath>
+    <ManifestFile>pkcs12_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\pkcs12</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="pkcs12.h" />
+
+    <Compile Include="p12_add.cpp" />
+    <Compile Include="p12_asn.cpp" />
+    <Compile Include="p12_attr.cpp" />
+    <Compile Include="p12_crpt.cpp" />
+    <Compile Include="p12_crt.cpp" />
+    <Compile Include="p12_decr.cpp" />
+    <Compile Include="p12_init.cpp" />
+    <Compile Include="p12_key.cpp" />
+    <Compile Include="p12_kiss.cpp" />
+    <Compile Include="p12_mutl.cpp" />
+    <Compile Include="p12_utl.cpp" />
+    <Compile Include="p12_npas.cpp" />
+    <Compile Include="pk12err.cpp" />
+    <Compile Include="p12_p8d.cpp" />
+    <Compile Include="p12_p8e.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

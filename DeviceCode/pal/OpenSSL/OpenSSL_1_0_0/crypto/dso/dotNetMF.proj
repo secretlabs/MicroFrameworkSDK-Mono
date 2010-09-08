@@ -1,0 +1,51 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>dso_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{6537a8ae-9a52-400b-b363-b323ef2ad984}</ProjectGuid>
+    <Description>Crypto DSO library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>dso_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\dso\dotNetMF.proj</ProjectPath>
+    <ManifestFile>dso_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\dso</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="dso.h" />
+
+    <Compile Include="dso_dl.cpp" />
+    <Compile Include="dso_dlfcn.cpp" />
+    <Compile Include="dso_err.cpp" />
+    <Compile Include="dso_lib.cpp" />
+    <Compile Include="dso_null.cpp" />
+    <Compile Include="dso_openssl.cpp" />
+    <Compile Include="dso_win32.cpp" />
+    <Compile Include="dso_vms.cpp" />
+    <Compile Include="dso_beos.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

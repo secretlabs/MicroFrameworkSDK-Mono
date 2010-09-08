@@ -1,0 +1,55 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>sockets_rtip_pal</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{8050a542-7ce8-4d68-b771-fe25d31a8bbb}</ProjectGuid>
+    <Description>RTIP network driver</Description>
+    <Level>PAL</Level>
+    <LibraryFile>sockets_rtip_pal.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\rtip\SocketsDriver\dotnetmf.proj</ProjectPath>
+    <ManifestFile>sockets_rtip_pal.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Network</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SocketDriver_PAL" Guid="{AB747E68-221D-4cca-A42E-C8E7A39DBBC6}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>RTIP</CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\rtip\SocketsDriver</Directory>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\Framework\Features\NetworkStack_PAL.libcatproj" />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <HFiles Include="RTIP_Sockets.h" />
+    <Compile Include="RTIP_Sockets_functions.cpp" />
+    <Compile Include="RTIP__Sockets.cpp" />
+    <IncludePaths Include="DeviceCode\Drivers\Ethernet\Loopback" />
+    <IncludePaths Include="DeviceCode\pal\net" />
+    <IncludePaths Include="DeviceCode\pal\rtip" />
+    <IncludePaths Include="DeviceCode\pal\rtip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\rtip\SocketsDriver" />
+    <IncludePaths Include="DeviceCode\pal\rtip\TinyCLR" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

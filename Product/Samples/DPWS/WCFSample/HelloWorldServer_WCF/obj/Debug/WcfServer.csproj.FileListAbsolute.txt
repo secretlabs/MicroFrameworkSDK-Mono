@@ -1,0 +1,5 @@
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldServer_WCF\bin\WcfServer.exe
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldServer_WCF\bin\WcfServer.pdb
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldServer_WCF\obj\Debug\ResolveAssemblyReference.cache
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldServer_WCF\obj\Debug\WcfServer.exe
+C:\depot\current\CLIENT_V4_1\Product\Samples\DPWS\WCFSample\HelloWorldServer_WCF\obj\Debug\WcfServer.pdb

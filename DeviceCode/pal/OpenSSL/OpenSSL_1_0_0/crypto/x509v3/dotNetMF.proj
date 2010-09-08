@@ -1,0 +1,79 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>x509v3_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{cbdf84ca-8ec6-4527-9c43-f9e98d7930ce}</ProjectGuid>
+    <Description>Crypto X509v3 Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>x509v3_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\PAL\crypto\x509v3\dotNetMF.proj</ProjectPath>
+    <ManifestFile>x509v3_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\x509v3</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="x509v3.h" />
+    <HFiles Include="pcy_int.h" />
+
+    <Compile Include="v3_bcons.cpp" />
+    <Compile Include="v3_bitst.cpp" />
+    <Compile Include="v3_conf.cpp" />
+    <Compile Include="v3_extku.cpp" />
+    <Compile Include="v3_ia5.cpp" />
+    <Compile Include="v3_lib.cpp" />
+    <Compile Include="v3_prn.cpp" />
+    <Compile Include="v3_utl.cpp" />
+    <Compile Include="v3err.cpp" />
+    <Compile Include="v3_genn.cpp" />
+    <Compile Include="v3_alt.cpp" />
+    <Compile Include="v3_skey.cpp" />
+    <Compile Include="v3_akey.cpp" />
+    <Compile Include="v3_pku.cpp" />
+    <Compile Include="v3_int.cpp" />
+    <Compile Include="v3_enum.cpp" />
+    <Compile Include="v3_sxnet.cpp" />
+    <Compile Include="v3_cpols.cpp" />
+    <Compile Include="v3_crld.cpp" />
+    <Compile Include="v3_purp.cpp" />
+    <Compile Include="v3_info.cpp" />
+    <Compile Include="v3_ocsp.cpp" />
+    <Compile Include="v3_akeya.cpp" />
+    <Compile Include="v3_pmaps.cpp" />
+    <Compile Include="v3_pcons.cpp" />
+    <Compile Include="v3_ncons.cpp" />
+    <Compile Include="v3_pcia.cpp" />
+    <Compile Include="v3_pci.cpp" />
+    <Compile Include="pcy_cache.cpp" />
+    <Compile Include="pcy_node.cpp" />
+    <Compile Include="pcy_data.cpp" />
+    <Compile Include="pcy_map.cpp" />
+    <Compile Include="pcy_tree.cpp" />
+    <Compile Include="pcy_lib.cpp" />
+    <Compile Include="v3_asid.cpp" />
+    <Compile Include="v3_addr.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,37 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>CLRStartup</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>43B72D54-49C6-4727-A9BB-3DA1B8DF7ACF</ProjectGuid>
+    <Description>Common CLR initialization library</Description>
+    <Level>CLR</Level>
+    <LibraryFile>CLRStartup.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\CLR\StartupLib\dotNetMF.proj</ProjectPath>
+    <ManifestFile>CLRStartup.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Core</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>True</PlatformIndependent>
+    <Required>true</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>CLR\StartupLib</Directory>
+    <OutputType>Library</OutputType>
+    <NoOptForParserTarget>Release</NoOptForParserTarget>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="CLRStartup.cpp" />
+    <IncludePaths Include="CLR\libraries\corlib" />
+    <IncludePaths Include="CLR\libraries\SPOT" />
+    <IncludePaths Include="CLR\libraries\SPOT_Graphics" />
+    <IncludePaths Include="CLR\libraries\SPOT_Hardware" />
+    <IncludePaths Include="CLR\libraries\SPOT_Net" />
+    <IncludePaths Include="CLR\libraries\SPOT_Net_Security" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

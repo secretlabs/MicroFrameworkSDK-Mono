@@ -1,0 +1,71 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>bn_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{e06094ec-128e-4124-94f9-cfc9b3134672}</ProjectGuid>
+    <Description>Crypto BN Library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>bn_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\bn\dotNetMF.proj</ProjectPath>
+    <ManifestFile>bn_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\bn</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="bn.h" />
+    <HFiles Include="bn_lcl.h" />
+    <HFiles Include="bn_prime.h" />
+
+    <Compile Include="bn_add.cpp" />
+    <Compile Include="bn_div.cpp" />
+    <Compile Include="bn_exp.cpp" />
+    <Compile Include="bn_lib.cpp" />
+    <Compile Include="bn_ctx.cpp" />
+    <Compile Include="bn_mul.cpp" />
+    <Compile Include="bn_mod.cpp" />
+    <Compile Include="bn_print.cpp" />
+    <Compile Include="bn_rand.cpp" />
+    <Compile Include="bn_shift.cpp" />
+    <Compile Include="bn_word.cpp" />
+    <Compile Include="bn_blind.cpp" />
+    <Compile Include="bn_kron.cpp" />
+    <Compile Include="bn_sqrt.cpp" />
+    <Compile Include="bn_gcd.cpp" />
+    <Compile Include="bn_prime.cpp" />
+    <Compile Include="bn_err.cpp" />
+    <Compile Include="bn_sqr.cpp" />
+    <Compile Include="bn_asm.cpp" />
+    <Compile Include="bn_recp.cpp" />
+    <Compile Include="bn_mont.cpp" />
+    <Compile Include="bn_mpi.cpp" />
+    <Compile Include="bn_exp2.cpp" />
+    <Compile Include="bn_gf2m.cpp" />
+    <Compile Include="bn_nist.cpp" />
+    <Compile Include="bn_depr.cpp" />
+    <Compile Include="bn_const.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

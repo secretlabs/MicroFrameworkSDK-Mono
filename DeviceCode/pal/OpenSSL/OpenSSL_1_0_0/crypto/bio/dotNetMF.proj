@@ -1,0 +1,63 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>bio_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{f82b0b73-ab03-4b2a-b72a-409735a80772}</ProjectGuid>
+    <Description>BIO library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>bio_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\bio\dotNetMF.proj</ProjectPath>
+    <ManifestFile>bio_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\bio</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="bio.h" />
+    <HFiles Include="bio_lcl.h" />
+
+    <Compile Include="bio_lib.cpp" />
+    <Compile Include="bio_cb.cpp" />
+    <Compile Include="bio_err.cpp" />
+    <Compile Include="bss_mem.cpp" />
+    <Compile Include="bss_null.cpp" />
+    <Compile Include="bss_fd.cpp" />
+    <Compile Include="bss_file.cpp" />
+    <Compile Include="bss_sock.cpp" />
+    <Compile Include="bss_conn.cpp" />
+    <Compile Include="bf_null.cpp" />
+    <Compile Include="bf_buff.cpp" />
+    <Compile Include="b_print.cpp" />
+    <Compile Include="b_dump.cpp" />
+    <!--Compile Include="b_sock.cpp" /-->
+    <Compile Include="bss_acpt.cpp" />
+    <Compile Include="bf_nbio.cpp" />
+    <Compile Include="bss_log.cpp" />
+    <Compile Include="bss_bio.cpp" />
+    <Compile Include="bss_dgram.cpp" />
+    <Compile Include="bf_lbuf.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

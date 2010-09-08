@@ -1,0 +1,55 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>cms_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{f07c2dfd-afc9-44a6-b320-b9ce80ce360d}</ProjectGuid>
+    <Description>Crypto CMS library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>cms_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\cms\dotNetMF.proj</ProjectPath>
+    <ManifestFile>cms_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\cms</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="cms.h" />
+    <HFiles Include="cms_lcl.h" />
+
+    <Compile Include="cms_lib.c" />
+    <Compile Include="cms_asn1.c" />
+    <Compile Include="cms_att.c" />
+    <Compile Include="cms_io.c" />
+    <Compile Include="cms_smime.c" />
+    <Compile Include="cms_err.c" />
+    <Compile Include="cms_sd.c" />
+    <Compile Include="cms_dd.c" />
+    <Compile Include="cms_cd.c" />
+    <Compile Include="cms_env.c" />
+    <Compile Include="cms_enc.c" />
+    <Compile Include="cms_ess.c" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

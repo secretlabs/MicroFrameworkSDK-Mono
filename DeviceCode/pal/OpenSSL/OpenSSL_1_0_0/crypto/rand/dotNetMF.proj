@@ -1,0 +1,52 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>rand_openssl</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{31837283-90f8-4d5d-ab08-0ab8077e456d}</ProjectGuid>
+    <Description>Crypto RAND library from OpenSSL</Description>
+    <Level>PAL</Level>
+    <LibraryFile>rand_openssl.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\rand\dotNetMF.proj</ProjectPath>
+    <ManifestFile>rand_openssl.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>System</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\rand</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+<!--
+  <ItemGroup>
+    <SubDirectories Include="Stubs"/>
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <HFiles Include="rand.h" />
+
+    <Compile Include="md_rand.cpp" />
+    <Compile Include="randfile.cpp" />
+    <Compile Include="rand_lib.cpp" />
+    <Compile Include="rand_err.cpp" />
+    <Compile Include="rand_egd.cpp" />
+    <Compile Include="rand_win.cpp" />
+    <Compile Include="rand_unix.cpp" />
+    <Compile Include="rand_os2.cpp" />
+    <Compile Include="rand_nw.cpp" />
+    <Compile Include="rand_imxs.cpp" />
+
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\inc32\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\" />
+    <IncludePaths Include="DeviceCode\pal\OpenSSL\OpenSSL_1_0_0\crypto\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

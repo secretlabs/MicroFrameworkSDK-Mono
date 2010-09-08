@@ -1,0 +1,50 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Diagnostics_stub</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>ADB4DC4C-011D-4489-A392-7FF220F38FE5</ProjectGuid>
+    <Description>Diagnostics stub library</Description>
+    <Level>CLR</Level>
+    <LibraryFile>Diagnostics_stub.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\CLR\Diagnostics\dotNetMF_stub.proj</ProjectPath>
+    <ManifestFile>Diagnostics_stub.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Diagnostics</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Diagnostics_CLR" Guid="{4E525F0B-5313-4CB2-9C7E-9133C5451FB4}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>True</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>True</IsStub>
+    <Directory>CLR\Diagnostics</Directory>
+    <OutputType>Library</OutputType>
+    <NoOptForParserTarget>Release</NoOptForParserTarget>
+    <PlatformIndependentBuild>true</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <HFiles Include="Diagnostics.h" />
+    <Compile Include="diagnostics_stub.cpp" />
+    <IncludePaths Include="CLR\core" />
+    <IncludePaths Include="CLR\libraries\corlib" />
+    <IncludePaths Include="CLR\Libraries\SPOT" />
+    <IncludePaths Include="CLR\Libraries\SPOT_Hardware" />
+    <IncludePaths Include="CLR\Libraries\SPOT_Net" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>
